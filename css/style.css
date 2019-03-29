@@ -28,7 +28,7 @@ section > .container { padding: 80px 10px; }
 
 .header nav .nav-links .about-link:hover { color: #fff; }
 
-.header .introduction { position: relative; height: 200vh; width: 100%; color: #000; font-family: 'Archivo Black', sans-serif; letter-spacing: 8px; }
+.header .introduction { position: relative; height: 200vh; width: 100%; color: #000; font-family: 'Archivo Black', sans-serif; letter-spacing: 8px; background: url("../image/mee.jpeg") no-repeat center fixed; }
 
 .header .pattern-overlay-introduction { width: 100%; height: 100%; background-color: rgba(111, 122, 138, 0.9); color: #000; }
 
