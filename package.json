@@ -1,0 +1,39 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.min.js",
+  "scripts": {
+    "test": "npm run test:html",
+    "init:project": "npm install && npm-run-all init:*",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "build": "npm-run-all build:* test",
+    "build:sass": "node-sass --output-style compact -o css sass",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass --watch",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:build": "npm run build && npm-run-all watch:*",
+    "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michalmatysiak/michalmatysiak.github.io.git"
+  },
+  "author": "michal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michalmatysiak/michalmatysiak.github.io/issues"
+  },
+  "homepage": "https://github.com/michalmatysiak/michalmatysiak.github.io#readme",
+  "dependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "node-sass": "^4.11.0",
+    "nu-html-checker": "^0.1.0",
+    "uglifycss": "0.0.29"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}
